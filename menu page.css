@@ -1,0 +1,57 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply a basic font-family */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 90%;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.section {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    background-color: lightgray;
+}
+
+.section-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: darkgray;
+    color: white;
+    margin: 0;
+    padding: 5px 10px;
+    border-bottom-left-radius: 5px;
+    font-size: 125%; /* 25% larger than paragraph text */
+}
+
+@media (min-width: 768px) {
+    .section {
+        width: 48%;
+    }
+
+    .section:nth-child(3) {
+        clear: both;
+    }
+}
+
+@media (min-width: 992px) {
+    .section {
+        width: 31.33%; /* Approximately 1/3 of the width */
+    }
+
+    .section:nth-child(3) {
+        clear: none;
+    }
+}
